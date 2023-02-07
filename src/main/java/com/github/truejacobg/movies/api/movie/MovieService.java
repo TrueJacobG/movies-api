@@ -13,15 +13,15 @@ public class MovieService {
 
     private MovieRepository movieRepository;
 
-    public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
 
-    public Movie getMovieById(ObjectId id){
+    public Movie getMovieById(ObjectId id) {
         return movieRepository.findById(id).orElseThrow();
     }
 
-    public Optional<Movie> getMovieByImdbId(String imdbId){
+    public Optional<Movie> getMovieByImdbId(String imdbId) {
         return movieRepository.findMovieByImdbId(imdbId);
     }
 }
